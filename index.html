@@ -1,70 +1,327 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head> 
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naji Abusumaia - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
 <body>
-  <!-- this is a navbar -->
-  <nav id="navbar">
-    <a href="#home"> Home </a>
-    <a href="#about"> About </a>
-    <a href="#contact"> Contact </a>
-    <a href="#projects"> Projects </a>
-  </nav>
-  
-<div id = "home">
-  <h1>naji abusumaia</h1>
-
-  <img src= "myimage.jpg" width="200" height="200" alt="my image">
-
-</div>
-
-<div id = "about">
-  <h2> my name is naji i made this app in 6/17/225</h2>
-  <ol>
-    <li> I am 14 </li>
-    <li> I have no job </li> 
-    <li> I love my life </li> 
-    <li> I love playing Helldivers 2 </li>
-    <li> I have 2 brothers and 1 cat </li>
-    <li> I have a ps5 and I love playing on </li>
-  </ol>
-</div>
-
-  <div id = "contact">
-    <h1>Contact Me </h1>
-    <h3> email: najiabusumaia9@gmail.com</h3>
-  </div>
-
-  <div id = "projects">
-    <h2> my projects </h2>
-    <p>Here is some cool thing im working on!</p>
-
-    <div id= "projects-container">
-      <!-- <Projects> 1 -->
-      <div class="project-card">
-            <img src="ww.2.webp" width="200" height="200" alt="my website's projects">
-            <h3> My first project</h3>
-            <a href="#home" class="project-link">View Project</a>
-      </div>
-       <!-- <Projects> 2 -->
-      <div class="project-card">
-            <img src="ww.2.webp" width="200" height="200" alt="my website's projects">
-            <h3> My second project</h3>
-            <a href="#home" class="project-link">View Project</a>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>⚔ Establishing Connection ⚔</p>
+            <p style="font-size: 0.8em; margin-top: 10px; opacity: 0.7;">Preparing War Correspondence Archive...</p>
         </div>
     </div>
-  </div>
-  
-  <button onclick="changeColor()">change color</button>
-  
-  <script src="script.js"></script>
-</body>
 
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Naji Abusumaia</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Color Changer Button -->
+    <button id="color-changer" class="color-changer-btn" title="Change War Theme">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section hero-section">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Greetings, I am <span class="highlight">Naji Abusumaia</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            War Correspondent & Historical Chronicler
+                        </p>
+                        <p class="hero-description">
+                            Dedicated to documenting the Great War through detailed accounts and testimonies. 
+                            I specialize in battlefield reporting and preserving the stories of those who served.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">View War Chronicles</a>
+                            <a href="#contact" class="btn btn-secondary">Send Correspondence</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-placeholder">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">About the Correspondent</h2>
+                    <p class="section-subtitle">Learn about my service and dedication to historical documentation</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <div class="about-card">
+                            <h3>My Commission</h3>
+                            <p>
+                                I am a devoted war correspondent with an unwavering commitment to documenting the Great War. 
+                                With expertise in battlefield journalism and historical preservation, I focus on capturing 
+                                the experiences of those who serve on the front lines.
+                            </p>
+                            <p>
+                                My journey began with a calling to bear witness to history in the making. Through countless 
+                                hours in the trenches and behind enemy lines, I have dedicated myself to preserving the 
+                                testimonies and stories that must never be forgotten.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skills-grid fade-in">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <h4>War Correspondence</h4>
+                            <p>Frontline reporting, Telegraph communications, Field journalism</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <h4>Strategic Intelligence</h4>
+                            <p>Battle analysis, Troop movements, Tactical assessment</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-camera-retro"></i>
+                            </div>
+                            <h4>Documentation</h4>
+                            <p>Photographic evidence, Historical preservation, Archive management</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h4>Military Protocol</h4>
+                            <p>Chain of command, Field operations, Reconnaissance missions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">War Chronicles</h2>
+                    <p class="section-subtitle">A collection of dispatches and historical documentation from the Great War</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-explosion"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Battle of the Somme Report</h3>
+                            <p>Comprehensive documentation of the largest battle of 1916, including firsthand accounts from the trenches and strategic analysis of the offensive.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Field Notes</span>
+                                <span class="tech-tag">Telegraph</span>
+                                <span class="tech-tag">Photography</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-scroll"></i> Read Dispatch
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-archive"></i> View Archive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Verdun Under Siege</h3>
+                            <p>Detailed coverage of the longest single battle of WWI, documenting the 302-day siege and the heroic defense of the fortress city.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Interviews</span>
+                                <span class="tech-tag">Maps</span>
+                                <span class="tech-tag">Casualty Reports</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-scroll"></i> Read Dispatch
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-archive"></i> View Archive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-dove"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Armistice Day Chronicles</h3>
+                            <p>A comprehensive account of the final day of the Great War, capturing the emotions and experiences as the guns fell silent at the eleventh hour.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Testimonies</span>
+                                <span class="tech-tag">Ceasefire Orders</span>
+                                <span class="tech-tag">Peace Documentation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-scroll"></i> Read Dispatch
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-archive"></i> View Archive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Send Correspondence</h2>
+                    <p class="section-subtitle">Contact the war correspondent for interviews or historical inquiries</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info fade-in">
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Telegraph</h4>
+                                    <p>CORRESPONDENT.ABUSUMAIA.STOP</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-radio"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Field Radio</h4>
+                                    <p>FREQ: 127.450 MHz</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Current Station</h4>
+                                    <p>Western Front - Mobile Assignment</p>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form fade-in">
+                        <form id="contact-form" class="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Send Message
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Naji Abusumaia. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
-  
